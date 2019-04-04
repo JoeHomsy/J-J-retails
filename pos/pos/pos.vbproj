@@ -79,6 +79,18 @@
     <Compile Include="Client.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CURRENCY.Designer.vb">
+      <DependentUpon>CURRENCY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CURRENCY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.vb">
+      <DependentUpon>Employee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="stock.Designer.vb">
+      <DependentUpon>stock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="stock.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transaction.Designer.vb">
       <DependentUpon>Transaction.vb</DependentUpon>
     </Compile>
@@ -117,6 +135,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CURRENCY.resx">
+      <DependentUpon>CURRENCY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -129,6 +153,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction.resx">
       <DependentUpon>Transaction.vb</DependentUpon>

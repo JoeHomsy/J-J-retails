@@ -1,7 +1,7 @@
 ﻿Public Class Transaction
 
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtBarcode.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
         txtClient.Enabled = True
 
     End Sub
@@ -12,18 +12,18 @@
     End Sub
 
 
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles txtItemDescription.TextChanged
-        txtItemDescription.Enabled = True
-    End Sub
-
-
-    Private Sub txtItemCode_TextChanged_1(sender As Object, e As EventArgs) Handles txtItemCode.TextChanged
-        txtItemCode.Enabled = True
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
-        txtPrice.Enabled = True
+
+    Private Sub txtItemCode_TextChanged_1(sender As Object, e As EventArgs)
+
+
+    End Sub
+
+    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub txtClient_TextChanged(sender As Object, e As EventArgs) Handles txtClient.TextChanged
@@ -32,5 +32,18 @@
 
     Private Sub btnClient_Click(sender As Object, e As EventArgs) Handles btnClient.Click
         Client.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        CURRENCY.Show()
+
+    End Sub
+
+    Private Sub Transaction_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

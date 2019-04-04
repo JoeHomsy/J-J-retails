@@ -32,19 +32,20 @@ Partial Class Transaction
         Me.txtInvoice = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.txtBarcode = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.txtItemDescription = New System.Windows.Forms.TextBox()
-        Me.txtItemCode = New System.Windows.Forms.TextBox()
         Me.btnNew = New System.Windows.Forms.Button()
         Me.btnClient = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -62,7 +63,7 @@ Partial Class Transaction
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(624, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(825, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -123,126 +124,135 @@ Partial Class Transaction
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(257, 54)
+        Me.DateTimePicker1.MinDate = New Date(2019, 4, 4, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 9
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 158)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Barcode"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(624, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(825, 25)
         Me.ToolStrip1.TabIndex = 11
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'txtBarcode
-        '
-        Me.txtBarcode.Location = New System.Drawing.Point(17, 184)
-        Me.txtBarcode.Name = "txtBarcode"
-        Me.txtBarcode.Size = New System.Drawing.Size(100, 20)
-        Me.txtBarcode.TabIndex = 12
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(388, 158)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(83, 13)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Item Description"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(283, 158)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(31, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Price"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(163, 158)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(55, 13)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Item Code"
-        '
-        'txtPrice
-        '
-        Me.txtPrice.Location = New System.Drawing.Point(257, 184)
-        Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(100, 20)
-        Me.txtPrice.TabIndex = 18
-        '
-        'txtItemDescription
-        '
-        Me.txtItemDescription.Location = New System.Drawing.Point(381, 184)
-        Me.txtItemDescription.Name = "txtItemDescription"
-        Me.txtItemDescription.Size = New System.Drawing.Size(100, 20)
-        Me.txtItemDescription.TabIndex = 19
-        '
-        'txtItemCode
-        '
-        Me.txtItemCode.Location = New System.Drawing.Point(137, 184)
-        Me.txtItemCode.Name = "txtItemCode"
-        Me.txtItemCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtItemCode.TabIndex = 20
-        '
         'btnNew
         '
-        Me.btnNew.Location = New System.Drawing.Point(14, 260)
+        Me.btnNew.Location = New System.Drawing.Point(700, 124)
         Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(103, 23)
+        Me.btnNew.Size = New System.Drawing.Size(103, 31)
         Me.btnNew.TabIndex = 21
         Me.btnNew.Text = "New"
         Me.btnNew.UseVisualStyleBackColor = True
         '
         'btnClient
         '
-        Me.btnClient.Location = New System.Drawing.Point(148, 260)
+        Me.btnClient.Location = New System.Drawing.Point(700, 241)
         Me.btnClient.Name = "btnClient"
-        Me.btnClient.Size = New System.Drawing.Size(103, 23)
+        Me.btnClient.Size = New System.Drawing.Size(103, 32)
         Me.btnClient.TabIndex = 22
         Me.btnClient.Text = "Client"
         Me.btnClient.UseVisualStyleBackColor = True
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(286, 260)
+        Me.btnSave.Location = New System.Drawing.Point(700, 198)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(103, 23)
+        Me.btnSave.Size = New System.Drawing.Size(103, 37)
         Me.btnSave.TabIndex = 23
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 124)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(671, 163)
+        Me.DataGridView1.TabIndex = 24
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(41, 293)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(144, 20)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "<<"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(191, 293)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(144, 20)
+        Me.Button2.TabIndex = 26
+        Me.Button2.Text = "<"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(341, 293)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(144, 20)
+        Me.Button3.TabIndex = 27
+        Me.Button3.Text = ">"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(491, 293)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(144, 20)
+        Me.Button4.TabIndex = 28
+        Me.Button4.Text = ">>"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(700, 161)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(103, 31)
+        Me.Button5.TabIndex = 29
+        Me.Button5.Text = "Currency"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(700, 279)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(103, 32)
+        Me.Button6.TabIndex = 30
+        Me.Button6.Text = "Search"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(257, 86)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(65, 20)
+        Me.Button7.TabIndex = 31
+        Me.Button7.Text = "RETURN"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(624, 357)
+        Me.ClientSize = New System.Drawing.Size(825, 337)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnClient)
         Me.Controls.Add(Me.btnNew)
-        Me.Controls.Add(Me.txtItemCode)
-        Me.Controls.Add(Me.txtItemDescription)
-        Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtBarcode)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtInvoice)
@@ -255,6 +265,7 @@ Partial Class Transaction
         Me.Text = "Transaction"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -270,16 +281,16 @@ Partial Class Transaction
     Friend WithEvents txtInvoice As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label4 As Label
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents txtBarcode As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtPrice As TextBox
-    Friend WithEvents txtItemDescription As TextBox
-    Friend WithEvents txtItemCode As TextBox
     Friend WithEvents btnNew As Button
     Friend WithEvents btnClient As Button
     Friend WithEvents btnSave As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
 End Class

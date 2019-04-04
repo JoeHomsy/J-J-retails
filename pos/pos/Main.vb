@@ -11,4 +11,14 @@
         Me.Close()
         Close()
     End Sub
+
+    Private Sub UsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UsersToolStripMenuItem.Click
+        Employee.Show()
+    End Sub
+
+    Private Sub InquiryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InquiryToolStripMenuItem.Click
+        stock.Show()
+        Me.Hide()
+
+    End Sub
 End Class

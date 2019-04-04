@@ -28,12 +28,13 @@ Partial Class Main
         Me.ShutDownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InquiryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.StockToolStripMenuItem, Me.InquiryToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.StockToolStripMenuItem, Me.InquiryToolStripMenuItem, Me.UsersToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
@@ -71,6 +72,12 @@ Partial Class Main
         Me.InquiryToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.InquiryToolStripMenuItem.Text = "Inquiry"
         '
+        'UsersToolStripMenuItem
+        '
+        Me.UsersToolStripMenuItem.Name = "UsersToolStripMenuItem"
+        Me.UsersToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.UsersToolStripMenuItem.Text = "Users"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -93,4 +100,5 @@ Partial Class Main
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShutDownToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InquiryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsersToolStripMenuItem As ToolStripMenuItem
 End Class
