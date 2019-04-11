@@ -24,9 +24,7 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -44,34 +42,17 @@ Partial Class Login
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username"
         '
-        'Label2
+        'UsernameTextBox
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(55, 156)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Password"
-        '
-        'txtUsername
-        '
-        Me.txtUsername.Location = New System.Drawing.Point(125, 117)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(150, 20)
-        Me.txtUsername.TabIndex = 2
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(125, 153)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(150, 20)
-        Me.txtPassword.TabIndex = 3
+        Me.UsernameTextBox.Location = New System.Drawing.Point(125, 117)
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        Me.UsernameTextBox.Size = New System.Drawing.Size(150, 20)
+        Me.UsernameTextBox.TabIndex = 2
         '
         'btnLogin
         '
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Location = New System.Drawing.Point(145, 189)
+        Me.btnLogin.Location = New System.Drawing.Point(145, 170)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(100, 32)
         Me.btnLogin.TabIndex = 4
@@ -81,7 +62,7 @@ Partial Class Login
         'btnExit
         '
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Location = New System.Drawing.Point(145, 227)
+        Me.btnExit.Location = New System.Drawing.Point(145, 218)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(100, 29)
         Me.btnExit.TabIndex = 5
@@ -117,9 +98,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.txtUsername)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Login"
@@ -131,9 +110,7 @@ Partial Class Login
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker

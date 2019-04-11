@@ -31,3 +31,4 @@ C:\Users\admin\Desktop\GitProject\J-J-retails\pos\pos\obj\Debug\pos.xml
 C:\Users\admin\Desktop\GitProject\J-J-retails\pos\pos\obj\Debug\pos.pdb
 C:\Users\admin\Desktop\GitProject\J-J-retails\pos\pos\obj\Debug\pos.CURRENCY.resources
 C:\Users\admin\Desktop\GitProject\J-J-retails\pos\pos\obj\Debug\pos.stock.resources
+C:\Users\admin\Desktop\GitProject\J-J-retails\pos\pos\obj\Debug\pos.login2.resources

@@ -22,6 +22,8 @@ Partial Class Transaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Transaction))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,20 +34,36 @@ Partial Class Transaction
         Me.txtInvoice = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnNew = New System.Windows.Forms.Button()
-        Me.btnClient = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Inv_contentBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.Inv_contentBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.Inv_contentDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Inv_contentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._J_JDataSet = New pos._J_JDataSet()
+        Me.Inv_contentTableAdapter = New pos._J_JDataSetTableAdapters.inv_contentTableAdapter()
+        Me.TableAdapterManager = New pos._J_JDataSetTableAdapters.TableAdapterManager()
+        Me.EmployeeTableAdapter1 = New pos._J_JDataSetTableAdapters.employeeTableAdapter()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Inv_contentBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Inv_contentBindingNavigator.SuspendLayout()
+        CType(Me.Inv_contentDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Inv_contentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._J_JDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,7 +81,7 @@ Partial Class Transaction
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(825, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(584, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -129,130 +147,196 @@ Partial Class Transaction
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 9
         '
-        'ToolStrip1
+        'Inv_contentBindingNavigator
         '
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(825, 25)
-        Me.ToolStrip1.TabIndex = 11
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.Inv_contentBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.Inv_contentBindingNavigator.BindingSource = Me.Inv_contentBindingSource
+        Me.Inv_contentBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.Inv_contentBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.Inv_contentBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.Inv_contentBindingNavigatorSaveItem})
+        Me.Inv_contentBindingNavigator.Location = New System.Drawing.Point(0, 24)
+        Me.Inv_contentBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.Inv_contentBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.Inv_contentBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.Inv_contentBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.Inv_contentBindingNavigator.Name = "Inv_contentBindingNavigator"
+        Me.Inv_contentBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.Inv_contentBindingNavigator.Size = New System.Drawing.Size(584, 25)
+        Me.Inv_contentBindingNavigator.TabIndex = 32
+        Me.Inv_contentBindingNavigator.Text = "BindingNavigator1"
         '
-        'btnNew
+        'BindingNavigatorMoveFirstItem
         '
-        Me.btnNew.Location = New System.Drawing.Point(700, 124)
-        Me.btnNew.Name = "btnNew"
-        Me.btnNew.Size = New System.Drawing.Size(103, 31)
-        Me.btnNew.TabIndex = 21
-        Me.btnNew.Text = "New"
-        Me.btnNew.UseVisualStyleBackColor = True
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
-        'btnClient
+        'BindingNavigatorMovePreviousItem
         '
-        Me.btnClient.Location = New System.Drawing.Point(700, 241)
-        Me.btnClient.Name = "btnClient"
-        Me.btnClient.Size = New System.Drawing.Size(103, 32)
-        Me.btnClient.TabIndex = 22
-        Me.btnClient.Text = "Client"
-        Me.btnClient.UseVisualStyleBackColor = True
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
-        'btnSave
+        'BindingNavigatorSeparator
         '
-        Me.btnSave.Location = New System.Drawing.Point(700, 198)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(103, 37)
-        Me.btnSave.TabIndex = 23
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
-        'DataGridView1
+        'BindingNavigatorPositionItem
         '
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 124)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(671, 163)
-        Me.DataGridView1.TabIndex = 24
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'Button1
+        'BindingNavigatorCountItem
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 293)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(144, 20)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "<<"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
-        'Button2
+        'BindingNavigatorSeparator1
         '
-        Me.Button2.Location = New System.Drawing.Point(191, 293)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(144, 20)
-        Me.Button2.TabIndex = 26
-        Me.Button2.Text = "<"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'Button3
+        'BindingNavigatorMoveNextItem
         '
-        Me.Button3.Location = New System.Drawing.Point(341, 293)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(144, 20)
-        Me.Button3.TabIndex = 27
-        Me.Button3.Text = ">"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
-        'Button4
+        'BindingNavigatorMoveLastItem
         '
-        Me.Button4.Location = New System.Drawing.Point(491, 293)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(144, 20)
-        Me.Button4.TabIndex = 28
-        Me.Button4.Text = ">>"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
-        'Button5
+        'BindingNavigatorSeparator2
         '
-        Me.Button5.Location = New System.Drawing.Point(700, 161)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(103, 31)
-        Me.Button5.TabIndex = 29
-        Me.Button5.Text = "Currency"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'Button6
+        'BindingNavigatorAddNewItem
         '
-        Me.Button6.Location = New System.Drawing.Point(700, 279)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(103, 32)
-        Me.Button6.TabIndex = 30
-        Me.Button6.Text = "Search"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
         '
-        'Button7
+        'BindingNavigatorDeleteItem
         '
-        Me.Button7.Location = New System.Drawing.Point(257, 86)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(65, 20)
-        Me.Button7.TabIndex = 31
-        Me.Button7.Text = "RETURN"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'Inv_contentBindingNavigatorSaveItem
+        '
+        Me.Inv_contentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Inv_contentBindingNavigatorSaveItem.Image = CType(resources.GetObject("Inv_contentBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.Inv_contentBindingNavigatorSaveItem.Name = "Inv_contentBindingNavigatorSaveItem"
+        Me.Inv_contentBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.Inv_contentBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'Inv_contentDataGridView
+        '
+        Me.Inv_contentDataGridView.AutoGenerateColumns = False
+        Me.Inv_contentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Inv_contentDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.Inv_contentDataGridView.DataSource = Me.Inv_contentBindingSource
+        Me.Inv_contentDataGridView.Location = New System.Drawing.Point(12, 107)
+        Me.Inv_contentDataGridView.Name = "Inv_contentDataGridView"
+        Me.Inv_contentDataGridView.Size = New System.Drawing.Size(543, 244)
+        Me.Inv_contentDataGridView.TabIndex = 32
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "inv1_id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "inv1_id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "inv1_i_code"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "inv1_i_code"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "inv1_qty"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "inv1_qty"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "inv1_i_description"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "inv1_i_description"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "inv1_i_price"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "inv1_i_price"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'Inv_contentBindingSource
+        '
+        Me.Inv_contentBindingSource.DataMember = "inv content"
+        Me.Inv_contentBindingSource.DataSource = Me._J_JDataSet
+        '
+        '_J_JDataSet
+        '
+        Me._J_JDataSet.DataSetName = "_J_JDataSet"
+        Me._J_JDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Inv_contentTableAdapter
+        '
+        Me.Inv_contentTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientTableAdapter = Nothing
+        Me.TableAdapterManager.currencyTableAdapter = Nothing
+        Me.TableAdapterManager.employeeTableAdapter = Me.EmployeeTableAdapter1
+        Me.TableAdapterManager.inv_contentTableAdapter = Me.Inv_contentTableAdapter
+        Me.TableAdapterManager.invoice_headerTableAdapter = Nothing
+        Me.TableAdapterManager.Item_StockTableAdapter = Nothing
+        Me.TableAdapterManager.jjusersTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = pos._J_JDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsersTableAdapter = Nothing
+        '
+        'EmployeeTableAdapter1
+        '
+        Me.EmployeeTableAdapter1.ClearBeforeFill = True
         '
         'Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(825, 337)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.btnSave)
-        Me.Controls.Add(Me.btnClient)
-        Me.Controls.Add(Me.btnNew)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.ClientSize = New System.Drawing.Size(584, 363)
+        Me.Controls.Add(Me.Inv_contentDataGridView)
+        Me.Controls.Add(Me.Inv_contentBindingNavigator)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtInvoice)
@@ -265,7 +349,12 @@ Partial Class Transaction
         Me.Text = "Transaction"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Inv_contentBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Inv_contentBindingNavigator.ResumeLayout(False)
+        Me.Inv_contentBindingNavigator.PerformLayout()
+        CType(Me.Inv_contentDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Inv_contentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._J_JDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -281,16 +370,28 @@ Partial Class Transaction
     Friend WithEvents txtInvoice As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents btnNew As Button
-    Friend WithEvents btnClient As Button
-    Friend WithEvents btnSave As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents _J_JDataSet As _J_JDataSet
+    Friend WithEvents Inv_contentBindingSource As BindingSource
+    Friend WithEvents Inv_contentTableAdapter As _J_JDataSetTableAdapters.inv_contentTableAdapter
+    Friend WithEvents TableAdapterManager As _J_JDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Inv_contentBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents Inv_contentBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents EmployeeTableAdapter1 As _J_JDataSetTableAdapters.employeeTableAdapter
+    Friend WithEvents Inv_contentDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class
